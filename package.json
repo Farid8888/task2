@@ -1,0 +1,11 @@
+{
+  "name": "tasks-regex",
+  "version": "1.0.0",
+  "description": "Функция decode : const decode = (inp)=>\r     inp\r     .replace(\r       /.\\d+/g,\r       (x) => new Array(+x.slice(1)).fill(x.includes(\".\") ? 1 : 0).join(\"\") + \"-\"\r     )\r     .split(\"-\")\r     .filter(x=>x !== '')\r      .map(x=>[...x])\r      .map(x=>x.length===1 ? '.' : `${(x.length -2)/ 2}`)\r      .join('')\r      .split('.')\r      .map(x=>+x)\r      .flatMap((value,index,array)=> index % 2 === 0 ? [[value,array[index+1]]] : [])\r      .sort((a,b)=>a[1] - b[1])\r      .map((x,i)=>String.fromCharCode(x[0]))",
+  "main": "task.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
